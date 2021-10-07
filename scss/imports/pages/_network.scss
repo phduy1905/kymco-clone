@@ -1,0 +1,94 @@
+.banner-network {
+  background-image: url("../images/network-banner.jpg");
+  grid-column: full-start/ full-end;
+}
+
+.network-container {
+  padding: 15rem 0;
+  grid-column: full-start/center-end;
+  position: relative;
+  display: flex;
+
+  .network__img {
+    height: 67rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .network__map {
+    transform: translateX(-10rem);
+  }
+
+  .network__map-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include xs {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .note {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 5rem;
+      }
+
+      span {
+        @include text(2.6rem, $font-secondary, normal, $black-cl, uppercase);
+      }
+    }
+    .icon {
+      margin-right: 2rem;
+      img {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+  }
+
+  .network__textbox {
+    @include text(2.6rem, $font-secondary, normal, $black-cl, normal);
+    letter-spacing: 1.04px;
+    max-width: 60rem;
+    margin-bottom: 7.5rem;
+
+    h2 {
+      font-size: 4.5rem;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+  }
+
+  .network__map-img {
+    margin-bottom: 10rem;
+    .marker {
+      width: 40px;
+      height: 40px;
+      background-image: url("../images/marker-red.png");
+      background-position: center;
+      background-size: cover;
+      display: inline-block;
+      position: absolute;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.8);
+      }
+
+      &::after {
+        content: "";
+      }
+    }
+
+    .marker.black {
+      background-image: url("../images/marker-black.png");
+    }
+  }
+}

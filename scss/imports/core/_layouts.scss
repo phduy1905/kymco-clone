@@ -1,0 +1,158 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include sm {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: auto;
+  font-family: $font-main;
+  line-height: 1.6;
+  color: $cl-black;
+  background: $white-cl;
+  scroll-behavior: smooth;
+  position: relative;
+  @include customscroll();
+  overflow-x: hidden;
+
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .container-fluid {
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include xs {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .no-gap > .col,
+  .no-gap > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @media (min-width: $xxs-min) {
+    .container {
+      max-width: 540px;
+    }
+  }
+
+  @media (min-width: $xs-min) {
+    .container {
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: $sm-min) {
+    .container {
+      max-width: 960px;
+    }
+  }
+
+  @media (min-width: $md-min) {
+    .container {
+      max-width: $container-width;
+    }
+  }
+
+  .mainwrapper {
+    width: 100%;
+    margin: auto;
+    @include visible;
+  }
+
+  @include lg {
+    // CSS responsive large desktop
+  }
+
+  @include md {
+    // CSS responsive desktop
+  }
+
+  @include sm {
+    // CSS responsive tablet
+  }
+
+  @include xs {
+    // CSS responsive mobile
+  }
+
+  @include xxs {
+    // CSS responsive small mobile
+  }
+
+  @media (max-width: 500px) {
+  }
+
+  @include maxW(500px) {
+  }
+}
+
+.grid-container {
+  display: grid;
+  // grid-template-rows: 100vh repeat(2, min-content) 65rem repeat(3, min-content);
+  grid-template-columns:
+    [full-start] 1fr [center-start] repeat(
+      12,
+      [col-start] minmax(min-content, 9.75rem) [col-end]
+    )
+    [center-end] 1fr [full-end];
+
+  // @include sm {
+  //   grid-template-rows: 60vh repeat(6, min-content);
+  // }
+
+  // @include xs {
+  //   grid-template-rows: 50vh repeat(6, min-content);
+  // }
+}

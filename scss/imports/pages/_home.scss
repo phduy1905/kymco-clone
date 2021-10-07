@@ -1,0 +1,486 @@
+// CSS HOMEPAGE
+
+.slider {
+  grid-column: full-start/full-end;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+
+  @include sm {
+    height: 60vh;
+  }
+
+  @include xs {
+    height: 50vh;
+  }
+  &__item-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .flickity-viewport {
+      height: 100% !important;
+    }
+  }
+
+  &__item {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__item.is-selected {
+    .slider__item-textbox {
+      animation: fadeUp 1s ease 0.5s backwards;
+    }
+  }
+
+  &__item-textbox {
+    position: absolute;
+    bottom: 30%;
+    max-width: 52rem;
+    line-height: 1.2;
+    z-index: 2;
+
+    @include sm {
+      bottom: 40%;
+    }
+
+    @include xs {
+      max-width: 30rem;
+    }
+  }
+
+  &__heading {
+    color: $white-cl;
+    font-size: 4.8rem;
+    font-family: "Avo Bold";
+    animation: fadeUp;
+    letter-spacing: 1.92px;
+
+    @include xs {
+      font-size: 3rem;
+    }
+  }
+
+  &__item-bg {
+    height: 100%;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      @include midimg;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 3rem;
+
+    @include sm {
+      bottom: 1.5rem;
+    }
+
+    .container-fluid {
+      display: flex;
+      justify-content: space-between;
+      color: $white-cl;
+      align-items: flex-end;
+    }
+
+    .scroll-down {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      p {
+        transform: rotate(90deg) translateY(2.6rem);
+        margin-bottom: 5rem;
+        font-size: 1.4rem;
+
+        @include sm {
+          margin-bottom: 4rem;
+        }
+      }
+
+      img {
+        @include sm {
+          height: 50%;
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      font-family: "SFU DIN";
+      line-height: initial;
+
+      .current-page {
+        margin-right: 2rem;
+
+        @include sm {
+          margin-right: 1.2rem;
+        }
+
+        @include xs {
+          margin-right: 0.5rem;
+        }
+      }
+
+      .current-page,
+      .slash {
+        font-size: 7.3rem;
+
+        @include sm {
+          font-size: 5rem;
+        }
+
+        @include xs {
+          font-size: 3rem;
+        }
+      }
+
+      .total-page {
+        font-size: 4.8rem;
+        opacity: 0.7;
+        margin-left: 1.7rem;
+        transform: translateY(-6px);
+
+        @include sm {
+          font-size: 3rem;
+          margin-left: 1rem;
+        }
+
+        @include xs {
+          font-size: 2rem;
+          margin-left: 0.5rem;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+.tech {
+  grid-column: center-start / full-end;
+  padding: 12rem 0rem 6rem;
+
+  @include sm {
+    grid-column: full-start / full-end;
+    padding: 5rem 0rem 3rem;
+    flex-direction: column;
+  }
+
+  .slider__textbox-container {
+    margin-right: -15rem;
+    margin-top: 5rem;
+    z-index: 2;
+
+    .slider__textbox-heading {
+      font-size: 6rem;
+      letter-spacing: 2.4px;
+    }
+  }
+}
+
+.products {
+  grid-column: center-start / center-end;
+  padding: 6rem 0 12rem 0;
+  text-align: center;
+
+  &__container::after {
+    content: "flickity";
+    display: none;
+  }
+
+  @include xs {
+    padding: 4rem 0 8rem 0;
+  }
+
+  .section__textbox {
+    margin-bottom: 8rem;
+
+    @include xs {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .products__container {
+    margin-bottom: 8rem;
+
+    @include xs {
+      margin-bottom: 6rem;
+    }
+
+    .flickity-slider {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .product__item {
+    width: 23rem;
+    height: 34rem;
+    margin-right: 2rem;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s;
+
+    &:hover {
+      .product__img img {
+        transform: translate(-50%, -50%) scale(1.1);
+        @include transition($t);
+      }
+    }
+
+    &:not(.is-selected) {
+      transform: scale(0.8);
+    }
+  }
+
+  .product__item.active {
+    .product__title {
+      max-width: 15rem;
+    }
+  }
+
+  .product__info {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    z-index: 2;
+    text-align: left;
+  }
+
+  .product__title {
+    font-family: $font-secondary;
+    color: $white-cl;
+    text-transform: uppercase;
+    max-width: 7rem;
+    font-size: 4.7rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+
+  .product__img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include midimg;
+      @include transition($t);
+    }
+  }
+
+  @media screen and (min-width: $xxs-min) {
+    .products__container:after {
+      content: "";
+    }
+
+    .products__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product__item {
+      margin-right: 6.5rem;
+      height: 42rem;
+      max-width: 28rem;
+      width: 25%;
+    }
+
+    .product__item.active {
+      height: 60rem;
+      max-width: 41rem;
+      width: 50%;
+    }
+
+    .product__item:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.services {
+  grid-column: full-start / full-end;
+  background: url("../images/services-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 7.5rem;
+  height: 65rem;
+
+  @include sm {
+    padding-top: 3rem;
+    height: 40rem;
+  }
+
+  .section__textbox {
+    margin-bottom: 6rem;
+
+    // @include sm {
+    //     margin-bottom: 3rem;
+    // }
+
+    // @include xs {
+    //     margin-bottom: 3rem;
+    // }
+  }
+
+  .section__heading {
+    max-width: 30rem;
+    line-height: 1;
+    margin-bottom: 3rem;
+
+    @include sm {
+      margin-bottom: 2rem;
+    }
+
+    @include xs {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.news {
+  grid-column: center-start / center-end;
+  padding: 12rem 0;
+
+  @include xs {
+    padding: 4rem 0;
+  }
+  .section__textbox {
+    text-align: center;
+    margin-bottom: 8rem;
+
+    @include xs {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem;
+
+    @include sm {
+      flex-direction: column;
+    }
+
+    @include xs {
+      margin-bottom: 4.5rem;
+    }
+  }
+
+  &__item {
+    width: 35rem;
+    height: 56.8rem;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    @include sm {
+      width: 90%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__img {
+    height: 32rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transform: scale(1);
+      @include transition($t);
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__info {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  &__title {
+    font-family: $font-secondary;
+    font-size: 3.5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin-bottom: 1.5rem;
+    color: $cl-black;
+    text-decoration: none;
+    @include transition($t);
+
+    &:hover {
+      color: $cl-primary;
+    }
+  }
+
+  &__des {
+    @include overtext(3);
+    min-height: 7rem;
+    margin-bottom: 3.5rem;
+    color: $black-cl;
+  }
+
+  &__link {
+    display: block;
+    color: $black-cl;
+    text-decoration: underline;
+  }
+
+  .btn-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.network {
+  grid-column: full-start / full-end;
+  background: url("../images/network.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 65rem;
+  padding: 3rem 0;
+  position: relative;
+
+  .section__textbox {
+    text-align: center;
+
+    .section__heading {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .btn-container {
+    position: absolute;
+    bottom: 9rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

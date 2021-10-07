@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Avo";
+  src: url("/fonts/UTMAvo.woff2") format("woff2"),
+    url("/fonts/UTMAvo.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Avo Bold";
+  src: url("/fonts/UTMAvoBold.woff2") format("woff2"),
+    url("/fonts/UTMAvoBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SFU DIN";
+  src: url("/fonts/SFUDINEngAlt.woff2") format("woff2"),
+    url("/fonts/SFUDINEngAlt.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SFU DIN Light";
+  src: url("/fonts/SFUDINLight.woff2") format("woff2"),
+    url("/fonts/SFUDINLight.woff") format("woff");
+}

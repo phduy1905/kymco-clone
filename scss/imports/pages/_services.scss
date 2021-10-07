@@ -1,0 +1,47 @@
+.banner-services {
+  background-image: url("../images/banner-services.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services__faq {
+  .container {
+    h3 {
+      font-family: $font-secondary;
+      text-transform: uppercase;
+      font-size: 4rem;
+      margin-bottom: 7rem;
+    }
+    padding: 10rem 0;
+    min-height: 140rem;
+
+    .faq-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      .faq__list {
+        padding: 4rem 6rem;
+        background-color: $cl-primary;
+        color: $cl-white;
+        list-style: square;
+        display: inline-block;
+        min-width: 32.5rem;
+        margin-right: 12.5rem;
+        li {
+          font-family: $font-secondary;
+          text-transform: uppercase;
+          font-size: 3rem;
+          cursor: pointer;
+        }
+      }
+
+      .faq__details {
+        p {
+          font-family: $font-secondary;
+          margin-bottom: 10rem;
+        }
+      }
+    }
+  }
+}

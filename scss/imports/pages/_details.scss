@@ -1,0 +1,219 @@
+.banner-details {
+  background-image: url("../images/details-banner.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+
+  @include sm {
+    height: 60vh;
+  }
+
+  @include xs {
+    height: 40vh;
+  }
+
+  .banner__bike {
+    position: absolute;
+    bottom: -6rem;
+
+    .banner__360-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.details__info {
+  grid-column: center-start / center-end;
+  padding: 8rem 2rem 12rem;
+  margin: 0 auto;
+  text-align: center;
+
+  @include xs {
+    padding: 4rem 2rem 6rem;
+  }
+  .color-container {
+    text-align: center;
+  }
+  .color {
+    height: 5rem;
+    width: 5rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+    &--black {
+      background-color: $black-cl;
+    }
+
+    &--green {
+      background-color: #617941;
+      border: 1px solid $black-cl;
+    }
+
+    &--red {
+      background-color: $cl-primary;
+    }
+  }
+
+  .details__title {
+    font-size: 8rem;
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
+    line-height: normal;
+  }
+
+  .details__subtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  .details__des {
+    font-size: 2.2rem;
+    margin-top: 4.5rem;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 7rem;
+      background-color: $black-cl;
+    }
+    p {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .details__price {
+    font-size: 3.5rem;
+    font-family: $font-secondary;
+    line-height: 1;
+    margin-top: 10.5rem;
+    span {
+      display: block;
+      font-size: 7rem;
+    }
+  }
+}
+
+.details__spec {
+  grid-column: full-start / center-end;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include xs {
+    flex-direction: column-reverse;
+  }
+
+  &-img {
+    position: relative;
+    height: 0;
+    padding-bottom: 48%;
+    width: 100%;
+    max-width: 90rem;
+    margin-right: 4.6rem;
+    @include xs {
+      height: 0;
+      padding-bottom: 70%;
+    }
+    img {
+      @include midimg;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-accordion {
+    width: 55rem;
+    padding-right: 2rem;
+    @include xs {
+      width: 100%;
+      padding: 0 2rem;
+    }
+    h2 {
+      font-size: 6rem;
+      font-family: $font-secondary;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 6rem;
+    }
+
+    .accordion {
+      display: flex;
+      justify-content: space-between;
+      font-size: 3.5rem;
+      font-family: $font-secondary;
+      text-transform: uppercase;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .label {
+      padding: 4rem 0;
+      overflow: hidden;
+      display: none;
+      transition: max-height 0.2s ease-out;
+    }
+    .label__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}
+
+.details__features {
+  padding: 12rem 0;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns:
+    [full-start] 1fr [center-start] repeat(
+      12,
+      [col-start] minmax(min-content, 9.75rem) [col-end]
+    )
+    [center-end] 1fr [full-end];
+
+  @include xs {
+    padding: 4rem 0;
+  }
+  h2 {
+    grid-column: full-start / full-end;
+    text-align: center;
+    font-size: 6rem;
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    margin-bottom: 8rem;
+
+    @include xs {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .slider-container {
+    grid-column: center-start / full-end;
+
+    .slider__textbox .line {
+      top: -30%;
+      left: -70%;
+    }
+  }
+}

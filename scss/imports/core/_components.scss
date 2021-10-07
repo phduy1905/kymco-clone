@@ -1,0 +1,193 @@
+// css components
+// Banner
+.banner {
+  background-repeat: none;
+  background-size: cover;
+  background-position: center center;
+
+  @include sm {
+    height: 40rem;
+  }
+
+  @include xs {
+    height: 30rem;
+  }
+}
+
+// Slider
+.slider-container {
+  display: flex;
+  align-items: flex-start;
+
+  @include sm {
+    grid-column: full-start / full-end;
+    padding: 5rem 0rem 3rem;
+    flex-direction: column-reverse;
+  }
+
+  .slider__textbox-container {
+    flex: 1;
+    padding-right: 5rem;
+    padding-left: 2rem;
+    max-width: 50rem;
+    width: 100%;
+    position: relative;
+
+    @include sm {
+      max-width: 100%;
+      padding: 0 1rem;
+      height: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .slider__textbox {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+      position: relative;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+      }
+
+      .line {
+        position: absolute;
+        height: 2px;
+        top: 0;
+        left: -100%;
+        background-color: $black-cl;
+        animation: minimizeLine 0.7s ease 0.5s forwards;
+      }
+    }
+
+    .slider__number {
+      font-family: $font-secondary;
+      font-size: 7.3rem;
+      margin-bottom: 4rem;
+      &-total {
+        font-size: 4.8rem;
+        color: $cl-gray;
+      }
+    }
+
+    .slider__textbox-heading {
+      font-family: $font-secondary;
+      text-transform: uppercase;
+      font-size: 3.5rem;
+      line-height: 1;
+      margin-bottom: 3rem;
+      position: relative;
+      animation: fadeUp 1s ease 0.5s backwards;
+    }
+
+    .slider__textbox-des {
+      animation: fadeUp 1s ease 0.8s backwards;
+    }
+  }
+
+  .slider__img-container {
+    flex: 2;
+    height: 45rem;
+    width: 100%;
+    position: relative;
+
+    @include sm {
+      flex: none;
+    }
+  }
+
+  .slider__img-list {
+    width: 100%;
+    height: 100%;
+
+    .flickity-viewport {
+      height: 100% !important;
+    }
+  }
+
+  .slider__img-item {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .slider__img-controller {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    @include sm {
+      transform: translateX(-1rem);
+    }
+  }
+
+  .slider__btn {
+    border: none;
+    background: $cl-primary;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    @include transition($t);
+
+    img {
+      @include transition($t);
+    }
+
+    &-prev {
+      transform: translateX(0.5rem);
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 3rem;
+        width: 1px;
+        background: $white-cl;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+    }
+
+    &:hover {
+      background: $cl-primary-darker;
+    }
+
+    // &-prev::before {
+    //     content: "";
+    //     height: 1px;
+    //     width: 0;
+    //     top: 46%;
+    //     left: 14%;
+    //     position: absolute;
+    //     background-color: $white-cl;
+    //     transform-origin: right;
+    //     @include transition($t);
+    // }
+
+    &-prev:hover {
+      img {
+        transform: translateX(-0.3rem);
+        @include transition($t);
+      }
+    }
+
+    &-next:hover {
+      img {
+        transform: translateX(0.3rem);
+        @include transition($t);
+      }
+    }
+
+    // &-prev:hover::before {
+    //     width: 2.7rem;
+    //     @include transition($t);
+    // }
+  }
+}

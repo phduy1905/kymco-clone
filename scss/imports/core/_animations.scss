@@ -1,0 +1,35 @@
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pointDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-2rem);
+  }
+}
+
+@keyframes minimizeLine {
+  0% {
+    width: 0%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    width: 40rem;
+    opacity: 1;
+    visibility: visible;
+  }
+}

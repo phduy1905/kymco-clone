@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- meta facebook -->
+  <meta property="og:locale" content="vi" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Trang chủ" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:image" content="" />
+  <!-- link css -->
+  <link rel="stylesheet" href="dest/style.min.css" />
+  <link rel="stylesheet" href="dest/fonts.css" />
+  <title>Kymco</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container-fluid">
+      <div class="header__logo">
+        <a href="/index.html">
+          <img src="images/logo.png" alt="Kymco Logo" />
+        </a>
+      </div>
+      <ul class="header__menu">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="news.html">News </a></li>
+      </ul>
+      <div class="header__right">
+        <div class="header__search">
+          <img src="images/search-white.png" alt="" />
+        </div>
+        <a href="/stores.html" class="header__btn">Stores</a>
+        <a href="/register.html" class="header__btn">Registration</a>
+        <div class="header__hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="nav">
+    <button class="nav__close-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+    <ul>
+      <li class="nav__logo">
+        <a href="/index.html">
+          <img src="images/logo.png" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="/products.html">Products</a>
+      </li>
+      <li>
+        <a href="/technology.html">Technology</a>
+      </li>
+      <li>
+        <a href="/services.html">Services</a>
+      </li>
+      <li>
+        <a href="/news.html">News</a>
+      </li>
+      <li>
+        <a href="/stores.html">Stores</a>
+      </li>
+      <li>
+        <a href="/register.html">Registration</a>
+      </li>
+      <li class="nav__search-box">
+        <input type="text" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clip-rule="evenodd" />
+        </svg>
+      </li>
+    </ul>
+  </nav>
+  <div class="overlay"></div>
+  <main>
+    <section class="banner banner-stores">
+      <div class="banner-textbox">
+        <h1>Stores</h1>
+        <p>Kymco's stores and service centers</p>
+      </div>
+    </section>
+    <section class="stores">
+      <h2 class="section__heading">
+        Find nearest Kymco's stores and service centers
+      </h2>
+      <div class="box-container">
+        <div class="box-left">
+          <div class="head">
+            <div class="tab-container">
+              <a href="#" class="active">Stores</a>
+              <a href="#">Service Center</a>
+            </div>
+            <div class="select-input-wrapper">
+              <div class="select-input s1" id="province">
+                <div class="select-wrapper">
+                  <div class="selected">
+                    <span>Cities</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="list-tab">
+                    <!-- <div class="tab" data-id="1">Hanoi</div>
+                      <div class="tab" data-id="2">TP HCM</div>
+                      <div class="tab" data-id="2">Quang Binh</div> -->
+                  </div>
+                </div>
+              </div>
+              <div class="select-input s2" id="district">
+                <div class="select-wrapper">
+                  <div class="selected">
+                    <span>District</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="list-tab">
+                    <!-- <div class="tab" data-id="1">
+                        <span>Ba Dinh</span>
+                      </div>
+                      <div class="tab" data-id="2">
+                        <span>Cau Giay</span>
+                      </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="list-result">
+              <div class="item"
+                data-id="!1m18!1m12!1m3!1d3919.495112358207!2d106.65100001515493!3d10.773340162195744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ebe99cb3f9b%3A0xf08411c58cb4424e!2zS1lNQ08gLSBUcnVuZyBUw6JtIELhuqNvIEjDoG5oIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1sen!2sth!4v1624275584239!5m2!1sen!2sth">
+                <h5 class="title">Kymco's service center HCM</h5>
+                <div class="info">
+                  <div class="location">
+                    <i class="pin-location-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </i>
+                    <span>134 Nguyễn Thị Nhỏ, Phường 15, Quận 11, Thành phố Hồ
+                      Chí Minh, Vietnam</span>
+                  </div>
+                  <div class="phone">
+                    <i class="phone-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                          d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      </svg>
+                    </i>
+                    <span>+84938982142</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item"
+                data-id="!1m18!1m12!1m3!1d3916.336548278124!2d106.69222171515584!3d11.01335625778626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d05eab36622b%3A0xfa6e0694b0262734!2z6LaK5Y2XIOWFiSDpmb0g5bmz6Zm9IOWFrOWPuCBDby4gVmlldG5hbSBLV0FORyBZQU5H!5e0!3m2!1sen!2sth!4v1624275704242!5m2!1sen!2sth">
+                <h5 class="title">Kwang Yang Vietnam</h5>
+                <div class="info">
+                  <div class="location">
+                    <i class="pin-location-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </i>
+                    <span>Lô C2-2, 3 N2 KCN Đại Đăng, KP. 3, Thủ Dầu Một, Bình
+                      Dương 75000, Vietnam</span>
+                  </div>
+                  <div class="phone">
+                    <i class="phone-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                          d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      </svg>
+                    </i>
+                    <span>+84907061346</span>
+                  </div>
+                </div>
+                <p></p>
+              </div>
+              <div class="item"
+                data-id="!1m18!1m12!1m3!1d3724.842611326355!2d105.8005584152317!3d20.998945194170663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acbd1f812a01%3A0xd718d8c322dd3ebb!2zS3ltY28gSMOgIE7hu5lp!5e0!3m2!1sen!2sth!4v1624275888723!5m2!1sen!2sth">
+                <h5 class="title">Kymco Hanoi</h5>
+                <div class="info">
+                  <div class="location">
+                    <i class="pin-location-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </i>
+                    <span>163 Nguyễn Tuân, Thanh Xuân Trung, Thanh Xuân, Hà Nội,
+                      Vietnam</span>
+                  </div>
+                  <div class="phone">
+                    <i class="phone-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                          d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      </svg>
+                    </i>
+                    <span>0123 456 789</span>
+                  </div>
+                </div>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-right">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.336548278124!2d106.69222171515584!3d11.01335625778626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d05eab36622b%3A0xfa6e0694b0262734!2z6LaK5Y2XIOWFiSDpmb0g5bmz6Zm9IOWFrOWPuCBDby4gVmlldG5hbSBLV0FORyBZQU5H!5e0!3m2!1sen!2sth!4v1624274108292!5m2!1sen!2sth"
+            width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <h3 class="footer__heading">kymco vietnam</h3>
+    <ul class="footer__links">
+      <li><a href="#">About kymco</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Kymco Network</a></li>
+    </ul>
+    <div class="footer__logo">
+      <img src="images/logo.png" alt="Kymco Logo" />
+    </div>
+    <p class="copyrights">
+      Kwang Yang Vietnam &copy; 2018. All rights reserved.
+    </p>
+  </footer>
+  <script src="dest/jsmain.min.js"></script>
+  <script src="dest/main.js"></script>
+</body>
+
+</html>

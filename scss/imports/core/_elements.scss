@@ -1,0 +1,89 @@
+// css button, title, icon, elements...
+img {
+  max-width: 100%;
+}
+
+.header__btn {
+  padding: 0.6rem 2rem;
+  background-color: $cl-primary;
+  border-radius: 5px;
+  margin-right: 1rem;
+  color: $white-cl;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  @include transition($t);
+  letter-spacing: 0.64px;
+
+  @include maxW(1100px) {
+    padding: 0.6rem 1rem;
+  }
+
+  &:hover {
+    background-color: $cl-primary-darker;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  font-family: $font-secondary;
+  font-weight: bold;
+  background-color: $cl-primary;
+  color: $white-cl;
+  padding: 0.8rem 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.44px;
+  @include br(5rem);
+  @include transition($t);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $cl-primary-darker;
+  }
+
+  &--cta {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    padding: 1.2rem 5rem;
+    line-height: normal;
+  }
+}
+
+// Typo of section heading
+section {
+  .section__heading {
+    font-family: $font-secondary;
+    font-size: 6rem;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+
+    @include xs {
+      margin-bottom: 1rem;
+      font-size: 4.5rem;
+    }
+  }
+
+  .section__des {
+    font-family: $font-main;
+    font-size: 2.2rem;
+    letter-spacing: 1.32px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  display: none;
+  cursor: pointer;
+
+  &.active {
+    display: block;
+  }
+}

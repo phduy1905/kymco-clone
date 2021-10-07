@@ -1,0 +1,9 @@
+.banner-tech {
+  background-image: url("../images/tech-banner.png");
+  background-position: bottom;
+  height: 54.5rem;
+
+  @include xs {
+    height: 54.5rem;
+  }
+}

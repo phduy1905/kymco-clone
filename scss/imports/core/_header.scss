@@ -1,0 +1,167 @@
+// css header
+.header {
+  background: rgb(170, 152, 136);
+  background: linear-gradient(180deg,
+      rgba(170, 152, 136, 1) 0%,
+      rgba(205, 187, 171, 0) 100%);
+
+  grid-column: full-start / full-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 3.6rem 0;
+  font-family: "Avo";
+  z-index: 10;
+  @include transition($t);
+
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;
+  }
+
+  &__logo {
+    height: 3rem;
+    width: 18rem;
+    color: $cl-black;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+
+    li {
+      margin-right: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover>a {
+        color: $cl-primary;
+        font-weight: bold;
+      }
+
+      @include maxW(1100px) {
+        margin-right: 2rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $cl-white;
+        text-transform: uppercase;
+        height: 100%;
+        line-height: 100%;
+        @include transition($t);
+        letter-spacing: 0.64px;
+      }
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+
+    @include xs {
+
+      .header__search,
+      .header__btn {
+        display: none;
+      }
+    }
+  }
+
+  &__search {
+    height: 2.6rem;
+    width: 3rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    @include transition($t);
+
+    @include maxW(1100px) {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  &.active {
+    background: $black-cl;
+    padding: 1.5rem 0;
+  }
+
+  &__hamburger {
+    height: 5rem;
+    width: 5rem;
+    position: relative;
+    display: none;
+    margin-left: 4rem;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 30;
+
+    span {
+      height: 2px;
+      width: 100%;
+      background-color: $white-cl;
+      position: absolute;
+      transition: all 0.3s;
+
+      &:nth-child(1) {
+        top: 25%;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+      }
+
+      &:nth-child(3) {
+        top: 75%;
+      }
+    }
+
+    @include sm {
+      display: block;
+    }
+
+    &:hover {
+      span:nth-child(1) {
+        top: 20%;
+      }
+
+      span:nth-child(3) {
+        top: 80%;
+      }
+    }
+
+    &.active {
+      span:nth-child(1) {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        top: 50%;
+        transform: translateX(10rem);
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        top: 50%;
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
